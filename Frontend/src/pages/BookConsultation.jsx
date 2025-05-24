@@ -18,7 +18,7 @@ export default function BookConsultation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/select-doctor?specialty=${formData.specialty.toLowerCase()}`, {
+   navigate(`/doctors?specialty=${formData.specialty.toLowerCase()}`, {
   state: { patientInfo: formData }
 });
   };
@@ -102,10 +102,7 @@ export default function BookConsultation() {
           className="w-full border p-2 rounded"
         />
                 
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
-        >
+        <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"  >
           Continue
         </button>
       </form>

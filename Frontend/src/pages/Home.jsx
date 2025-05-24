@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFirstAid } from "@fortawesome/free-solid-svg-icons";
+import ChatBot from "../Components/Chatbot/ChatBot";
 
 export default function Home() {
   return (
@@ -37,6 +40,13 @@ export default function Home() {
              </p>
         </div>
       </div>
+       <Link
+        to="/chatbot"
+        className="fixed bottom-6 right-8 bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition duration-300 z-50 animate-pulse"
+        aria-label="Open Chatbot"
+      >
+        <FontAwesomeIcon icon={faFirstAid} size="4x" />
+      </Link>
     </div>
   );
 }

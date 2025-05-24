@@ -1,16 +1,20 @@
+ 
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import './index.css'
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import BookConsultation from "./pages/BookConsultation";
-import SelectDoctor from "./pages/SelectDoctor";
+// import SelectDoctor from "./pages/SelectDoctor";
 import Payment from "./pages/Payment";
 import Consultation from "./pages/Consultation";
 import Profile from "./pages/Profile";
 import {Navbar} from "./components/Navbar";
 import Footer from "./components/Footer";
+import ChatBot from "./Components/Chatbot/ChatBot";
+import ShowDoctors from "./pages/ShowDoctors";
 
 function App() {
   return (
@@ -26,14 +30,18 @@ function App() {
           <Route path="/book" element={<BookConsultation />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/consultation" element={<Consultation />} />
-          <Route path="/select-doctor" element={<SelectDoctor />} />
+          {/* <Route path="/select-doctor" element={<SelectDoctor />} /> */}
           <Route path="/profile" element={<Profile />} />
+          <Route path="/chatbot" element={<ChatBot />} />
+           <Route path="/doctors" element={<ShowDoctors />} />
         </Routes>
        </div>
         <Footer />
       </div>
     </Router>
   );
+ 
+ 
 }
 
 export default App;
