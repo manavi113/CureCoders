@@ -433,12 +433,11 @@ export default function ChatBot() {
         body: JSON.stringify({ prompt }),
       });
 
-      // const data = await res.json();
-      // setMessages((msgs) => [...msgs, { sender: "bot", text: data.reply }]);
+    
 
 
       const data = await res.json();
-// asterisk remove karna
+ 
 const cleanReply = data.reply.replace(/\*/g, "");
 setMessages((msgs) => [...msgs, { sender: "bot", text: cleanReply }]);
       

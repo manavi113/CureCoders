@@ -14,7 +14,7 @@ module.exports.getReview = async (req, res) => {
         const response = await aiService(prompt);
         res.send(response);
     } catch (error) {
-        console.error("Error generating content:", error);
+        console.error("Error stack trace:", error.stack);
         res.status(500).send("Failed to generate content");
     }
 }

@@ -1,19 +1,4 @@
  
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import './index.css'
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
-import BookConsultation from "./pages/BookConsultation";
-// import SelectDoctor from "./pages/SelectDoctor";
-import Payment from "./pages/Payment";
-import Consultation from "./pages/Consultation";
-import Profile from "./pages/Profile";
-import {Navbar} from "./components/Navbar";
-=======
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import './index.css'
@@ -23,36 +8,10 @@ import BookConsultation from "./pages/BookConsultation";
 // import SelectDoctor from "./pages/SelectDoctor";
 import Consultation from "./pages/Consultation";
 import Navbar from "./components/Navbar"; 
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
 import Footer from "./components/Footer";
 import ChatBot from "./Components/Chatbot/ChatBot";
 import ShowDoctors from "./pages/ShowDoctors";
 
-<<<<<<< HEAD
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <div className="flex-grow p-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/book" element={<BookConsultation />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/consultation" element={<Consultation />} />
-          {/* <Route path="/select-doctor" element={<SelectDoctor />} /> */}
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/chatbot" element={<ChatBot />} />
-           <Route path="/doctors" element={<ShowDoctors />} />
-        </Routes>
-       </div>
-        <Footer />
-      </div>
-    </Router>
-=======
 import { loadUser } from "./userSlice.jsx";
 import { Elements } from "@stripe/react-stripe-js";
 import { useSelector } from "react-redux";
@@ -232,8 +191,7 @@ function App() {
       
         <Footer />
 </>
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
-  );
+);
  
  
 }

@@ -13,6 +13,7 @@ router.post("/get-review", async (req, res) => {
         res.json(botReply);
     } catch (error) {
         res.status(500).json({ error: "AI service failed" });
+         console.error("Error stack trace:", error.stack);
     }
 });
 

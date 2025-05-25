@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-
-=======
 // import CheckoutSteps from "../components/Cart/CheckoutSteps";
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
 export default function BookConsultation() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -20,14 +16,6 @@ export default function BookConsultation() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-<<<<<<< HEAD
-  const handleSubmit = (e) => {
-    e.preventDefault();
-   navigate(`/doctors?specialty=${formData.specialty.toLowerCase()}`, {
-  state: { patientInfo: formData }
-});
-  };
-=======
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
 //    navigate(`/doctors?specialty=${formData.specialty.toLowerCase()}`, {
@@ -42,15 +30,11 @@ const handleSubmit = (e) => {
   });
 };
 
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
   
   return (
     <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded">
       <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Book a Consultation</h2>
-<<<<<<< HEAD
-=======
       {/* <CheckoutSteps activeStep={0} /> */}
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"

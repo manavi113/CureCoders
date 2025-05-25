@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-=======
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
 
 export default function ShowDoctors() {
   const location = useLocation();
@@ -20,30 +14,15 @@ export default function ShowDoctors() {
   useEffect(() => {
     if (!specialty) return;
 
-<<<<<<< HEAD
-    console.log("Sending request for:", specialty);
-    axios
-      .get(`http://localhost:3000/api/doctors/doctorfetch`, {
-        params: { specialty },
-      })
-      .then((res) => {
-        console.log("Response from backend:", res.data);
-        console.log("Doctors received count:", res.data.length);
-=======
     axios
       .get(`http://localhost:3001/api/doctors/doctorfetch`, {
         params: { specialty },
       })
       .then((res) => {
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
         setDoctors(res.data);
         setLoading(false);
       })
       .catch((err) => {
-<<<<<<< HEAD
-        console.error("Fetch error:", err);
-=======
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
         setError("Error fetching doctors");
         setLoading(false);
       });
@@ -54,8 +33,6 @@ export default function ShowDoctors() {
   if (doctors.length === 0)
     return <div>No doctors found for "{specialty}"</div>;
 
-<<<<<<< HEAD
-=======
   // Doctor pe click hone pe uska data payment page ko bhejne ka function
 const handleBookAppointment = (doctor) => {
 const patientInfo = location.state?.patientInfo || JSON.parse(sessionStorage.getItem("patientInfo"));
@@ -68,7 +45,6 @@ const patientInfo = location.state?.patientInfo || JSON.parse(sessionStorage.get
   navigate("/process/payment", { state: { doctor, patientInfo } });
 };
 
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
   return (
     <div className="container mt-4">
       <h2 className="text-center mb-4 text-capitalize">
@@ -94,10 +70,6 @@ const patientInfo = location.state?.patientInfo || JSON.parse(sessionStorage.get
                 <h6 className="card-subtitle mb-3 text-muted">
                   {doc.qualification}
                 </h6>
-<<<<<<< HEAD
-
-=======
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
                 <p className="card-text mb-2">
                   <strong>Experience:</strong> {doc.experience} years
                 </p>
@@ -118,10 +90,7 @@ const patientInfo = location.state?.patientInfo || JSON.parse(sessionStorage.get
                     fontSize: "0.9rem",
                     padding: "6px 12px",
                   }}
-<<<<<<< HEAD
-=======
                   onClick={() => handleBookAppointment(doc)}
->>>>>>> a9d5cf5 (Clean history and remove sensitive data)
                 >
                   Book Appointment
                 </button>

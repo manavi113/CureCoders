@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 const errorMiddleware = require("./middleware/error");
 const cors = require("cors");
 const drRoute =require("./Routes/doctorRoutes");
-const geminiRoute = require('./Routes/geminiRoutes');
+// const geminiRoute = require('./Routes/geminiRoutes');
  const http = require('http');
 const { Server } = require('socket.io');
 const server = http.createServer(app);
@@ -59,11 +59,36 @@ const meetingRoutes = require('./Routes/meetingR');
 app.use("/api/v1", user);
 // app.use("/api/v1", order);
 app.use("/api/v1", payment);
-app.use('/api/gemini', geminiRoute);
+// app.use('/api/gemini', geminiRoute);
 app.use("/api/doctors",drRoute);
 
 app.use('/api/meetings', meetingRoutes);
 // // Middleware for Errors
 app.use(errorMiddleware);
 
+
+ 
+ 
+require('dotenv').config();
+ 
+const connectDB = require("./config/db");
+ 
+ 
+ 
+ 
+ 
+ 
+connectDB();
+ 
+ 
+
+ 
+
+// app.use('/api/gemini', geminiRoute);
+app.use("/api/doctors",drRoute);
+ 
+ 
+ 
+
 module.exports = app;
+
